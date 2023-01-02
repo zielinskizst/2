@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">
+function oblicz()
+{
+var x=document.getElementById("ile").value;
+if(x<0)
+{
+alert("Podaj liczbe wiekszą od zera");
+}
+else
+{
+var suma=0;
+var a;
+var b;
+var c;
+var d;
+if(document.getElementById("a1").checked == true)
+{
+a=x*24;
+}
+else
+{
+a=0;
+}
+if(document.getElementById("a2").checked == true)
+{
+b=x*15;
+}
+else
+{
+b=0;
+}
+if(document.getElementById("a3").checked == true)
+{
+c=x*2.50;
+}
+else
+{
+c=0;
+}
+if(document.getElementById("a4").checked == true)
+{
+d=x*20;
+}
+else
+{
+d=0;
+}
+suma=a+b+c+d;
+document.getElementById("wynik").innerHTML=suma;
+}
+}
+</script>
+</head>
+<body>
+Ilość:<input type="numeric" id="ile" /><br />
+Rodzaj<br />
+Wyborowa<input type="checkbox" name="rodzaj" id="a1" />
+Malboro<input type="checkbox" name="rodzaj" id="a2" />
+Piwo<input type="checkbox" name="rodzaj" id="a3" />
+Wino<input type="checkbox" name="rodzaj" id="a4" />
+<input type="button" onclick="oblicz()" value="Oblicz" />
+<p id="wynik"></p>
+</body>
+</html>
